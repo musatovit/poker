@@ -1,0 +1,135 @@
+@font-face {
+  font-family: 'Evolenta-regular';
+  src: url('./fonts/Evolventa-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  font-family: Evolenta-regular;
+  font-weight: 600;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-size: cover;
+  background-image: url("./background/4600281.jpg")
+}
+
+#root{
+  width: 99%;
+  height: 99%;
+  text-align: center;
+}
+
+.desk{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.firstRow {
+  flex-basis: 66%;
+  display: flex;
+}
+
+.secondRow {
+  flex-basis: 34%;
+  display: flex;
+}
+
+.firstColumn{
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.secondColumn{
+  flex-basis: 60%;
+}
+
+.thirdColumn{
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.columnsSecondRow {
+  flex-basis: 34%;
+}
+
+.rowFirstColumn {
+  flex-basis: 34%;
+}
+
+.rowThirdColumn{
+  flex-basis: 34%;
+}
+
+div{
+  border: 2px white solid;
+}
+
+button {
+  opacity: 0.04;
+}
+
+p{
+  margin: 0;
+  font-size: 150%
+}
+
+.level {
+  margin-top: 70px;
+  font-size: 400%;
+}
+
+.time {
+  margin-top: 40px;;
+  font-size: 800%;
+}
+
+.blindName {
+  font-size: 250%;
+  margin-top: 20px;
+}
+
+.blind {
+  margin-top: 20px;
+  font-size: 300%;
+}
+
+.nextBlindName {
+  margin-top: 20px
+}
+
+.nextBlind {
+  margin-top: 20px;
+  font-size: 250%;
+  opacity: 0.8;
+  color: gray;
+}
+
+.rowFirstColumn {
+  padding-top: 32px;
+  font-size: 150%;
+}
+
+.fullTime{
+  font-size: 150%;
+}
+
+.rowFirstColumnThird {
+  padding: 13px 0;
+  font-size: 100%;
+}
+
+.rowFirstColumnSecond {
+  padding: 20px 0;
+  font-size: 100%;
+}
+
+.textCol {
+  font-size: 95%;
+}
