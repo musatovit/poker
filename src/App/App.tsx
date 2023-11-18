@@ -43,7 +43,7 @@ function App() {
         setActualBlinds(() => {
             return blind
         })
-        // play()
+        play()
         // @ts-ignore
         setTime(blind.time*60)
     }, [level])
@@ -108,7 +108,7 @@ function App() {
                 <div className='secondColumn'>
                     <p onClick={()=> changeTournament()}>{blinds[0]?.name}</p>
                     <p className='level'>
-                        <Level level={level} setLevel={setLevel}/>
+                        <Level level={level} setLevel={setLevel} blinds={blinds}/>
                     </p>
                     <p className='time'>
                         <TimeBlinds time={time} setTime={setTime} isActive={isActive} setIsActive={setIsActive}/>
