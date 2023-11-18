@@ -64,6 +64,7 @@ html, body {
 }
 
 .rowThirdColumn{
+  padding-top: 10px;
   flex-basis: 34%;
 }
 
