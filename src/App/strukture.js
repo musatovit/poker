@@ -155,117 +155,117 @@ const alexey = [
 const vova =[
     {
         level: 1,
-        sb: 100,
-        bb: 200,
-        time: 25,
+        sb: 200,
+        bb: 400,
+        time: 20,
         name: "Three Re-Buy"
     }, {
         level: 2,
-        sb: 200,
-        bb: 400,
-        time: 25
+        sb: 300,
+        bb: 600,
+        time: 20
     },
     {
         level: 3,
-        sb: 300,
-        bb: 600,
-        time: 25
+        sb: 400,
+        bb: 800,
+        time: 20
     },
     {
         level: 4,
-        sb: 400,
-        bb: 800,
-        time: 25
-    },
-    {
-        level: 5,
         sb: 500,
         bb: 1000,
         time: 25
     },
     {
-        level: 6,
+        level: 5,
         sb: 600,
         bb: 1200,
         time: 25
     },
     {
-        level: 7,
+        level: 6,
         sb: 800,
         bb: 1600,
         time: 25
     },
     {
-        level: 8,
+        level: 7,
         sb: 1000,
         bb: 2000,
         time: 25
     },
     {
-        level: 9,
+        level: 8,
         sb: 1500,
         bb: 3000,
         time: 25
     },
     {
-        level: 10,
+        level: 9,
         sb: 2000,
         bb: 4000,
-        time: 25
+        time: 20
+    },
+    {
+        level: 10,
+        sb: 2500,
+        bb: 5000,
+        time: 20
     },
     {
         level: 11,
-        sb: 2500,
-        bb: 5000,
-        time: 25
+        sb: 3000,
+        bb: 6000,
+        time: 20
     },
     {
         level: 12,
-        sb: 3000,
-        bb: 6000,
-        time: 25
+        sb: 4000,
+        bb: 8000,
+        time: 20
     },
     {
         level: 13,
-        sb: 4000,
-        bb: 8000,
-        time: 25
+        sb: 5000,
+        bb: 10000,
+        time: 20
     },
     {
         level: 14,
-        sb: 5000,
-        bb: 10000,
-        time: 25
+        sb: 10000,
+        bb: 20000,
+        time: 20
     },
     {
         level: 15,
-        sb: 6000,
-        bb: 1200,
-        time: 25
+        sb: 15000,
+        bb: 30000,
+        time: 20
     },
     {
         level: 16,
-        sb: 7000,
-        bb: 14000,
-        time: 25
+        sb: 20000,
+        bb: 40000,
+        time: 20
     },
     {
         level: 17,
-        sb: 8000,
-        bb: 16000,
-        time: 25
+        sb: 30000,
+        bb: 60000,
+        time: 20
     },
     {
         level: 18,
-        sb: 9000,
-        bb: 10000,
-        time: 25
+        sb: 40000,
+        bb: 80000,
+        time: 20
     },
     {
         level: 19,
-        sb: 10000,
-        bb: 20000,
-        time: 25
+        sb: 50000,
+        bb: 100000,
+        time: 20
     },
 ]
 
