@@ -29,11 +29,16 @@ function App() {
     const [fullTime, setFullTime] = useState(0)
     const [nextPause, setNextPause] = useState(90*60)
     const [rebuy, setRebuy] = useState(0)
-    const [sumRebuy, setSumRebuy] = useState(0)
+    const [sumRebuy, setSumRebuy] = useState([0])
     const [allChips, setAllChips] = useState(40000*players.all)
 
     useEffect(() => {
-        setAllChips(40000*players.all+sumRebuy)
+        const sum = sumRebuy.reduce((acc, el) => {
+            // @ts-ignore
+            acc += el
+            return acc
+        })
+        setAllChips(40000*players.all+sum)
     }, [players]);
 
 
@@ -64,7 +69,7 @@ function App() {
             const timerId = setTimeout(() => {
                 setTime(time - 1);
                 setFullTime(fullTime+1)
-                setNextPause(nextPause-1)
+                setNextPause((prev) => prev-1)
             }, 1000);
             return () => clearTimeout(timerId);
         } else if (time === 0) {
@@ -87,6 +92,15 @@ function App() {
         setTime(getStrukture()[strukture][level - 1].time*60)
     }, [strukture]);
 
+    const addMinPause = (arg: string) => {
+        if (arg === '-') {
+            if (nextPause > 300) {
+                setNextPause((prev) => prev - 5*60)
+            }
+        } else {
+            setNextPause((prev) => prev + 5*60)
+        }
+    }
 
     return (
         <div className='desk'>
@@ -102,6 +116,8 @@ function App() {
                     <div className='rowFirstColumnThird'>
                        <p className='textCol'>Следующий перерыв через</p>
                         <p className='ddd'>{formatSeconds(nextPause)}</p>
+                        <button onClick={()=>addMinPause('-')}>-5</button>
+                        <button onClick={()=>addMinPause('+')}>+5</button>
                         <button onClick={()=>setNextPause(90*60)}>Cброс</button>
                     </div>
                 </div>
@@ -116,7 +132,7 @@ function App() {
                 </div>
                 <div className='thirdColumn'>
                     <div className='rowThirdColumn'>
-                        <Rebuys rebuy={rebuy} setRebuy={setRebuy} setSumRebuy={setSumRebuy} setAllChips={setAllChips}/>
+                        <Rebuys rebuy={rebuy} setRebuy={setRebuy} sumRebuy={sumRebuy} setSumRebuy={setSumRebuy} setAllChips={setAllChips}/>
                     </div>
                     <div className='rowThirdColumn'>
                         Средний стек

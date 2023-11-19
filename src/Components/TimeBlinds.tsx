@@ -15,3 +15,4 @@ function TimeBlinds({time, setTime, isActive, setIsActive}: any) {
 }
 
 export default TimeBlinds
+
