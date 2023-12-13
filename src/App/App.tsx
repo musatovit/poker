@@ -30,7 +30,7 @@ function App() {
     const [nextPause, setNextPause] = useState(90*60)
     const [rebuy, setRebuy] = useState(0)
     const [sumRebuy, setSumRebuy] = useState([0])
-    const [allChips, setAllChips] = useState(40000*players.all)
+    const [allChips, setAllChips] = useState(getStrukture()[strukture][0].buyIn ? 40000*players.all : 20000*players.all)
 
     useEffect(() => {
         const sum = sumRebuy.reduce((acc, el) => {
@@ -38,11 +38,12 @@ function App() {
             acc += el
             return acc
         })
-        setAllChips(40000*players.all+sum)
+        setAllChips(getStrukture()[strukture][0].buyIn ? 40000*players.all : 20000*players.all+sum)
     }, [players]);
 
 
     useEffect(() => {
+        // @ts-ignore
         const blind = blinds.find(el => el.level === level)
         // @ts-ignore
         setActualBlinds(() => {
@@ -102,6 +103,25 @@ function App() {
         }
     }
 
+
+    const getBlinds = (level : any) => {
+        // @ts-ignore
+        return (
+            <>
+                {(() => {
+                    // @ts-ignore
+                    const nextLevelBlind = blinds.find(el => el.level === level + 1);
+                    return nextLevelBlind ? (
+                        <>
+                            {nextLevelBlind.sb} / {nextLevelBlind.bb}
+                        </>
+                    ) : '';
+                })()}
+            </>
+        )
+    }
+
+// @ts-ignore
     return (
         <div className='desk'>
             <div className='firstRow'>
@@ -132,7 +152,7 @@ function App() {
                 </div>
                 <div className='thirdColumn'>
                     <div className='rowThirdColumn'>
-                        <Rebuys rebuy={rebuy} setRebuy={setRebuy} sumRebuy={sumRebuy} setSumRebuy={setSumRebuy} setAllChips={setAllChips}/>
+                        <Rebuys rebuy={rebuy} setRebuy={setRebuy} sumRebuy={sumRebuy} setSumRebuy={setSumRebuy} setAllChips={setAllChips} isBuyIn={getStrukture()[strukture][0].buyIn}/>
                     </div>
                     <div className='rowThirdColumn'>
                         Средний стек
@@ -156,9 +176,7 @@ function App() {
                     <>
                         <p className='nextBlindName'>Следующие блайнды</p>
                         <p className='nextBlind'>
-                            {blinds.find((el) => el.level === level + 1)?.sb} /
-                            {' '}
-                            {blinds.find((el) => el.level === level + 1)?.bb}
+                            {getBlinds(level)}
                         </p>
                     </>
                 </div>
