@@ -22,6 +22,7 @@ function App() {
     const [strukture, setStrukture] = useState(0)
     const [blinds, setBlinds] = useState(getStrukture()[strukture]);
     const [actualBlinds, setActualBlinds] = useState(blinds[level - 1]);
+    const [nextBlinds, setNextBlinds] = useState(blinds[level]);
     const [time, setTime] = useState(1500);
     const [isActive, setIsActive] = useState(false);
     const [play] = useSound(sound)
@@ -46,8 +47,13 @@ function App() {
         // @ts-ignore
         const blind = blinds.find(el => el.level === level)
         // @ts-ignore
+        const nextBlind = blinds.some(el => el.level === level + 1) ? blinds.find(el => el.level === level + 1) : blind
+        // @ts-ignore
         setActualBlinds(() => {
             return blind
+        })
+        setNextBlinds(() => {
+            return nextBlind
         })
         play()
         // @ts-ignore
@@ -101,24 +107,6 @@ function App() {
         } else {
             setNextPause((prev) => prev + 5*60)
         }
-    }
-
-
-    const getBlinds = (level : any) => {
-        // @ts-ignore
-        return (
-            <>
-                {(() => {
-                    // @ts-ignore
-                    const nextLevelBlind = blinds.find(el => el.level === level + 1);
-                    return nextLevelBlind ? (
-                        <>
-                            {nextLevelBlind.sb} / {nextLevelBlind.bb}
-                        </>
-                    ) : '';
-                })()}
-            </>
-        )
     }
 
 // @ts-ignore
@@ -176,7 +164,9 @@ function App() {
                     <>
                         <p className='nextBlindName'>Следующие блайнды</p>
                         <p className='nextBlind'>
-                            {getBlinds(level)}
+                            <>
+                                {nextBlinds.sb} / {nextBlinds.bb}
+                            </>
                         </p>
                     </>
                 </div>
