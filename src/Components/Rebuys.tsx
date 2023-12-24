@@ -20,9 +20,9 @@ function Rebuys({rebuy, setRebuy, sumRebuy,setSumRebuy, setAllChips, isBuyIn = t
             {isBuyIn
                 ? (
                     <>
-                        <button onClick={() => plusRebuy(40000)}>40</button>
                         <button onClick={() => plusRebuy(50000)}>50</button>
                         <button onClick={() => plusRebuy(60000)}>60</button>
+                        <button onClick={() => plusRebuy(70000)}>70</button>
                     </>
                 )
                 : <button onClick={() => plusRebuy(20000)}>20</button>
