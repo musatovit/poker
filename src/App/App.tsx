@@ -39,7 +39,7 @@ function App() {
             acc += el
             return acc
         })
-        setAllChips(getStrukture()[strukture][0].buyIn ? 40000*players.all : 20000*players.all+sum)
+        setAllChips(getStrukture()[strukture][0].buyIn ? 40000*players.all + sum : 20000*players.all+sum)
     }, [players]);
 
 
