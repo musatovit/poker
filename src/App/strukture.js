@@ -1,4 +1,3 @@
-
 const alexey1 = [
     {
         level: 1,
@@ -11,12 +10,12 @@ const alexey1 = [
     {
         level: 2,
         sb: 25,
-        bb: 50,
+        bb: '25 / 25',
         time: 15,
     },
     {
         level: 3,
-        sb: 25,
+        sb: 50,
         bb: '50 / 50',
         time: 15,
     },
@@ -28,14 +27,14 @@ const alexey1 = [
     },
     {
         level: 5,
-        sb: 75,
-        bb: '150 / 150',
+        sb: 100,
+        bb: '200 / 200',
         time: 15,
     },
     {
         level: 6,
         sb: 100,
-        bb: '200 / 200',
+        bb: '300 / 300',
         time: 15,
     },
     {
@@ -54,7 +53,7 @@ const alexey1 = [
         level: 9,
         sb: 250,
         bb: '500 / 500',
-        time: 20,
+        time: 15,
     },
     {
         level: 10,
@@ -106,53 +105,31 @@ const alexey1 = [
     },
     {
         level: 18,
+        sb: 2500,
+        bb: '5000 / 5000',
+        time: 20,
+    },
+    {
+        level: 19,
         sb: 3000,
         bb: '6000 / 6000',
         time: 20,
     },
     {
-        level: 19,
+        level: 20,
         sb: 4000,
         bb: '8000 / 8000',
         time: 20,
     },
     {
-        level: 20,
+        level: 21,
         sb: 5000,
         bb: '10000 / 10000',
         time: 20,
     },
-    {
-        level: 21,
-        sb: 6000,
-        bb: '12000 / 12000',
-        time: 20,
-    },
-    {
-        level: 22,
-        sb: 8000,
-        bb: '16000 / 16000',
-        time: 20,
-    },
-    {
-        level: 23,
-        sb: 10000,
-        bb: '20000 / 20000',
-        time: 20,
-    },
-    {
-        level: 24,
-        sb: 15000,
-        bb: '30000 / 30000',
-        time: 20,
-    },
-    {
-        level: 25,
-        sb: 20000,
-        bb: '40000 / 40000',
-        time: 20,
-    },
 ]
+
+
 const alexey2 = [
     {
         level: 1,

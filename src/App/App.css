@@ -76,6 +76,10 @@ button {
   opacity: 0.04;
 }
 
+button:hover {
+  opacity: 1;
+}
+
 p{
   margin: 0;
   font-size: 150%
