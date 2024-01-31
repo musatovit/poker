@@ -532,37 +532,37 @@ const dima = [
         level: 7,
         sb: 800,
         bb: 1600,
-        time: 20
+        time: 25
     },
     {
         level: 8,
         sb: 1000,
         bb: 2000,
-        time: 20
+        time: 25
     },
     {
         level: 9,
         sb: 1500,
         bb: 3000,
-        time: 20
+        time: 25
     },
     {
         level: 10,
         sb: 2000,
         bb: 4000,
-        time: 20
+        time: 25
     },
     {
         level: 11,
         sb: 2500,
         bb: 5000,
-        time: 20
+        time: 25
     },
     {
         level: 12,
         sb: 3000,
         bb: 6000,
-        time: 20
+        time: 25
     },
     {
         level: 13,
@@ -598,7 +598,13 @@ const dima = [
         level: 18,
         sb: 30000,
         bb: 60000,
-        time: 20
+        time: 15
+    },
+    {
+        level: 19,
+        sb: 40000,
+        bb: 80000,
+        time: 15
     },
 ]
 
