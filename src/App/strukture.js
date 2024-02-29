@@ -2,7 +2,7 @@ const alexey1 = [
     {
         level: 1,
         sb: 25,
-        bb: 25,
+        bb: 50,
         time: 15,
         name: 'Magick bounty',
         buyIn: false,
@@ -10,19 +10,19 @@ const alexey1 = [
     {
         level: 2,
         sb: 25,
-        bb: '25 / 25',
+        bb: '50 / 50',
         time: 15,
     },
     {
         level: 3,
         sb: 50,
-        bb: '50 / 50',
+        bb: '100 / 100',
         time: 15,
     },
     {
         level: 4,
-        sb: 50,
-        bb: '100 / 100',
+        sb: 75,
+        bb: '150 / 150',
         time: 15,
     },
     {

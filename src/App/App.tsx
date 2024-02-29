@@ -28,10 +28,10 @@ function App() {
     const [play] = useSound(sound)
     const [playPause] = useSound(pause)
     const [fullTime, setFullTime] = useState(0)
-    const [nextPause, setNextPause] = useState(90*60)
+    const [nextPause, setNextPause] = useState(120*60)
     const [rebuy, setRebuy] = useState(0)
     const [sumRebuy, setSumRebuy] = useState([0])
-    const [allChips, setAllChips] = useState(getStrukture()[strukture][0].buyIn ? 40000*players.all : 20000*players.all)
+    const [allChips, setAllChips] = useState(getStrukture()[strukture][0].buyIn ? 40000*players.all : 7500*players.all)
 
     useEffect(() => {
         const sum = sumRebuy.reduce((acc, el) => {
@@ -39,7 +39,7 @@ function App() {
             acc += el
             return acc
         })
-        setAllChips(getStrukture()[strukture][0].buyIn ? 40000*players.all + sum : 20000*players.all+sum)
+        setAllChips(getStrukture()[strukture][0].buyIn ? 40000*players.all + sum : 7500*players.all+sum)
     }, [players]);
 
 
@@ -97,6 +97,13 @@ function App() {
         setLevel(1)
         setActualBlinds(getStrukture()[strukture][level - 1])
         setTime(getStrukture()[strukture][level - 1].time*60)
+        const sum = sumRebuy.reduce((acc, el) => {
+            // @ts-ignore
+            acc += el
+            return acc
+        })
+        setAllChips(getStrukture()[strukture][0].buyIn ? 40000*players.all + sum : 7500*players.all+sum)
+        setNextBlinds(getStrukture()[strukture][level])
     }, [strukture]);
 
     const addMinPause = (arg: string) => {
