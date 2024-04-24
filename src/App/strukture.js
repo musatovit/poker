@@ -142,8 +142,6 @@ const alexey2 = [
         sb: 25,
         bb: '25 / 25',
         time: 15,
-        name: 'Bounty 24.04',
-        buyIn: false,
     },
     {
         level: 3,
