@@ -134,7 +134,7 @@ const alexey2 = [
         sb: 25,
         bb: 25,
         time: 15,
-        name: 'Deep stack',
+        name: 'Bounty 24.04',
         buyIn: false,
     },
     {
@@ -142,7 +142,7 @@ const alexey2 = [
         sb: 25,
         bb: '25 / 25',
         time: 15,
-        name: 'Deep stack',
+        name: 'Bounty 24.04',
         buyIn: false,
     },
     {
@@ -197,7 +197,7 @@ const alexey2 = [
         level: 11,
         sb: 300,
         bb: '600 / 600',
-        time: 20,
+        time: 15,
     },
     {
         level: 12,
